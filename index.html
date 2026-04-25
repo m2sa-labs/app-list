@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>アプリ紹介</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+      background: #fbf6ee;
+      color: #4b3324;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+ .header-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+    .animal {
+      width: 220px;
+    }
+
+    h1 {
+      font-size: 44px;
+      margin: 0;
+      letter-spacing: 0.08em;
+    }
+
+    .form-box {
+      background: #fffdf9;
+      border-radius: 28px;
+      padding: 28px;
+      margin-bottom: 36px;
+      box-shadow: 0 8px 20px rgba(80,55,35,0.08);
+      display: none;
+    }
+
+    .form-box h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 12px;
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid #ddd0bd;
+      font-size: 16px;
+      background: #fff;
+    }
+
+    textarea {
+      height: 90px;
+    }
+
+    .check-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 10px 0 18px;
+    }
+
+    .check-row label {
+      background: #f4ebde;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 15px;
+    }
+
+    .check-row input {
+      width: auto;
+      margin-right: 4px;
+    }
+
+    button {
+      border: none;
+      background: #8c8d55;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .app-card {
+      background: #fffdf9;
+      border-radius: 32px;
+      padding: 46px;
+      box-shadow: 0 10px 24px rgba(80, 55, 35, 0.08);
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .app-icon {
+      width: 220px;
+      height: 220px;
+      border-radius: 36px;
+      object-fit: cover;
+      background: #e8e2c2;
+    }
+
+    .app-title {
+      font-size: 40px;
+      margin: 0 0 10px;
+    }
+
+    .app-subtitle {
+      font-size: 20px;
+      color: #8c8d55;
+      margin-bottom: 24px;
+    }
+
+    .line {
+      border-top: 1px dotted #c9bd92;
+      margin-bottom: 24px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+    }
+
+    li {
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    li::before {
+      content: "✓";
+      color: #9fa568;
+      border: 2px solid #9fa568;
+      border-radius: 50%;
+      font-size: 12px;
+      padding: 1px 4px;
+      margin-right: 12px;
+    }
+
+    .badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: #f4ebde;
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 15px;
+    }
+
+.store-link {
+  display: inline-block;
+  margin-bottom: 18px;
+  background: #8c8d55;
+  color: white;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 15px;
+}
+
+    @media (max-width: 760px) {
+      .app-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 34px 24px;
+      }
+
+      .app-icon {
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .app-title {
+        font-size: 32px;
+      }
+
+      .badges {
+        justify-content: center;
+      }
+    }
+
+    .header {
+  position: relative;
+}
+
+.add-open-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 30px;
+  line-height: 1;
+  background: #8c8d55;
+  color: white;
+}
+.edit-btn {
+  position: absolute;
+  right: 28px;
+  top: 28px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 20px;
+  background: #f4ebde;
+  color: #4b3324;
+}
+.delete-btn {
+  position: absolute;
+  right: 82px;
+  top: 28px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 22px;
+  background: #f4ebde;
+  color: #4b3324;
+}
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="header">
+    
+      <div class="header-inner">
+
+  
+  <h1>作ったアプリ一覧</h1>
+  
+  <img src="assets/bear.png" class="animal">
+</div>
+
+
+    </header>
+
+    <section class="form-box">
+      <h2>アプリを登録する</h2>
+
+      <input id="titleInput" placeholder="アプリ名">
+      <input id="subtitleInput" placeholder="サブタイトル">
+      <input id="linkInput" placeholder="App Storeなどのリンク">
+
+      <input type="file" id="iconInput" accept="image/*">
+
+      <textarea id="pointsInput" placeholder="特徴を4つまで入力。1行に1つずつ"></textarea>
+
+      <div class="check-row">
+        <label><input type="checkbox" value="iOS" class="device">iOS</label>
+        <label><input type="checkbox" value="Android" class="device">Android</label>
+        <label><input type="checkbox" value="iPad" class="device">iPad</label>
+      </div>
+
+      <select id="priceInput">
+        <option value="無料アプリ">無料アプリ</option>
+        <option value="一部有料">一部有料</option>
+      </select>
+
+      <button onclick="addApp()">追加する</button>
+    </section>
+
+    <section class="cards" id="appCards"></section>
+
+  </main>
+
+  <script>
+    const isAdmin = location.search.includes("admin");
+let apps = [
+  {
+    title: "おつきさま さんしまい",
+    subtitle: "絵本アプリ",
+    link: "https://apps.apple.com/◯◯◯",
+    icon: "assets/app1.png",
+    points: [
+      "親子で一緒に楽しめる",
+      "しかけつき絵本アプリ",
+      "夜の空に輝く、３つのおつきさまのお話",
+      "おつきさまや動物をタッチして、お話を進めよう"
+    ],
+    devices: ["iOS"],
+    price: "無料アプリ"
+  }, 
+
+  {
+    title: "こども作品展｜リトルアトリエ",
+    subtitle: "子どもの作品を「保管」＆「展示」",
+    link: "https://apps.apple.com/jp/app/little-atelier/id6761620496",
+    icon: "assets/atelier.png",
+    points: [
+      "子どもの成長と思い出を、楽しく残そう",
+      "家族みんなの名前を登録可能",
+      "お気に入りを展示/飾る作品は自由に入れ替え◎",
+      "アルバムでいつでも作品を見返せる"
+    ],
+    devices: ["iOS"],
+    price: "無料アプリ"
+  },
+{
+  title: "きょうのおてがみ",
+  subtitle: "おてがみつくりたい！を叶えるアプリ",
+  link: "https://apps.apple.com/jp/app/little-atelier/id6761620496",
+  icon: "assets/otegami.png",
+  points: [
+    "あいうえお表なので、小さい子でも簡単入力",
+    "かわいい便箋を選択",
+    "スタンプもおして、楽しくお手紙を作れる◎",
+    "ひらがなの練習・定着/文章を考える力にも"
+  ],
+  devices: ["iOS"],
+  price: "無料アプリ"
+}
+];
+
+    const appCards = document.getElementById("appCards");
+
+    let editingIndex = null;
+
+    function saveApps() {
+      localStorage.setItem("myApps", JSON.stringify(apps));
+    }
+if (isAdmin) {
+  const btn = document.createElement("button");
+  btn.className = "add-open-btn";
+  btn.innerText = "＋";
+  btn.onclick = openForm;
+  document.querySelector(".header").appendChild(btn);
+}
+
+
+function openForm() {
+  document.querySelector(".form-box").style.display = "block";
+  document.querySelector(".form-box").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+function editApp(index) {
+  const app = apps[index];
+  editingIndex = index;
+
+  document.getElementById("titleInput").value = app.title;
+  document.getElementById("subtitleInput").value = app.subtitle;
+  document.getElementById("linkInput").value = app.link || "";
+  document.getElementById("pointsInput").value = app.points.join("\n");
+  document.getElementById("priceInput").value = app.price;
+
+  document.querySelectorAll(".device").forEach(input => {
+    input.checked = app.devices.includes(input.value);
+  });
+
+  document.querySelector(".form-box").style.display = "block";
+  document.querySelector(".form-box").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+function deleteApp(index) {
+  if (!confirm("このアプリを削除する？")) {
+    return;
+  }
+
+  apps.splice(index, 1);
+  saveApps();
+  renderApps();
+}
+
+    function renderApps() {
+      appCards.innerHTML = "";
+
+      apps.forEach((app, index) => {
+        const card = document.createElement("article");
+        card.className = "app-card";
+card.style.position = "relative";
+
+
+        card.innerHTML = `
+        ${isAdmin ? `
+  <button class="edit-btn" onclick="editApp(${index})">✎</button>
+  <button class="delete-btn" onclick="deleteApp(${index})">×</button>
+` : ""}
+          <div>
+            <img src="${app.icon}" class="app-icon" alt="">
+          </div>
+
+          <div>
+            <h2 class="app-title">${app.title}</h2>
+            <div class="app-subtitle">${app.subtitle}</div>
+            <div class="line"></div>
+
+            <ul>
+              ${app.points.map(point => `<li>${point}</li>`).join("")}
+            </ul>
+
+            ${app.link ? `<a class="store-link" href="${app.link}" target="_blank">アプリを見る</a>` : ""}
+            <div class="badges">
+              ${app.devices.map(device => `<span class="badge">${device}</span>`).join("")}
+              <span class="badge">${app.price}</span>
+            </div>
+          </div>
+        `;
+
+        appCards.appendChild(card);
+      });
+    }
+
+function addApp() {
+  const file = document.getElementById("iconInput").files[0];
+
+  if (file) {
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+      const img = new Image();
+
+      img.onload = function() {
+        const canvas = document.createElement("canvas");
+        const size = 500;
+
+        canvas.width = size;
+        canvas.height = size;
+
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, size, size);
+
+        const smallIcon = canvas.toDataURL("image/jpeg", 0.8);
+        saveAppData(smallIcon);
+      };
+
+      img.src = e.target.result;
+    };
+
+    reader.readAsDataURL(file);
+  } else {
+    if (editingIndex !== null) {
+      saveAppData(apps[editingIndex].icon);
+    } else {
+      alert("画像選んでね");
+    }
+  }
+}
+
+function saveAppData(icon) {
+  const title = document.getElementById("titleInput").value;
+  const subtitle = document.getElementById("subtitleInput").value;
+  const link = document.getElementById("linkInput").value;
+
+  const points = document.getElementById("pointsInput").value
+    .split("\n")
+    .filter(text => text.trim() !== "")
+    .slice(0, 4);
+
+  const devices = Array.from(document.querySelectorAll(".device:checked"))
+    .map(input => input.value);
+
+  const price = document.getElementById("priceInput").value;
+
+  if (!title || !subtitle || !icon || points.length === 0) {
+    alert("アプリ名・サブタイトル・画像・特徴を入力してね");
+    return;
+  }
+
+const newApp = {
+  title,
+  subtitle,
+  link,
+  icon,
+  points,
+  devices,
+  price
+};
+
+  if (editingIndex === null) {
+    apps.push(newApp);
+  } else {
+    apps[editingIndex] = newApp;
+    editingIndex = null;
+  }
+
+  saveApps();
+  renderApps();
+
+  document.getElementById("titleInput").value = "";
+  document.getElementById("subtitleInput").value = "";
+  document.getElementById("linkInput").value = "";
+  document.getElementById("iconInput").value = "";
+  document.getElementById("pointsInput").value = "";
+  document.querySelectorAll(".device").forEach(input => input.checked = false);
+  document.getElementById("priceInput").value = "無料アプリ";
+
+  document.querySelector(".form-box").style.display = "none";
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+    renderApps();
+  </script>
+</body>
+</html>
