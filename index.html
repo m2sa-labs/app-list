@@ -112,16 +112,16 @@
       border-radius: 32px;
       padding: clamp(20px, 4vw, 46px);
       box-shadow: 0 10px 24px rgba(80, 55, 35, 0.08);
-      display: grid;
-      grid-template-columns: 260px 1fr;
+      display: block;
+      text-align: left;
       gap: 44px;
       align-items: center;
     }
 
     .app-icon {
-      width: 220px;
-      height: 220px;
-      border-radius: 36px;
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
       object-fit: cover;
       background: #e8e2c2;
     }
@@ -142,11 +142,12 @@
       margin-bottom: 24px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 28px;
-    }
+ul {
+  list-style: none;
+  text-align: left;
+  width: fit-content;
+  margin: 0 auto 24px;
+}
 
     li {
       font-size: 18px;
@@ -154,14 +155,14 @@
     }
 
     li::before {
-      content: "✓";
-      color: #9fa568;
-      border: 2px solid #9fa568;
-      border-radius: 50%;
-      font-size: 12px;
-      padding: 1px 4px;
-      margin-right: 12px;
-    }
+  content: "✓";
+  color: #9fa568;
+  border: 2px solid #9fa568;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 1px 4px;
+  margin-right: 12px;
+}
 
     .badges {
       display: flex;
@@ -200,8 +201,8 @@
   }
 
   .app-icon {
-    width: 160px;  /* ←小さく */
-    height: 160px;
+    width: 60px;  /* ←小さく */
+    height: 60px;
     margin: 0 auto;
   }
 
@@ -228,7 +229,7 @@
   }
 
   h1 {
-    font-size: 26px;
+    font-size: 15px;
   }
 
   .animal {
@@ -301,6 +302,43 @@
   background: #f4ebde;
   color: #4b3324;
 }
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.app-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+}
+
+.app-title {
+  font-size: 20px;
+  margin: 0;
+}
+
+.app-subtitle {
+  font-size: 14px;
+  margin-top: 2px;
+}
+.app-header {
+  justify-content: flex-start;
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.line {
+  margin-top: 18px;
+}
   </style>
 </head>
 
@@ -312,7 +350,7 @@
       <div class="header-inner">
 
   
-  <h1>作ったアプリ一覧</h1>
+  <h1>アプリ一覧</h1>
   
   <img src="assets/bear.png" class="animal">
 </div>
@@ -360,7 +398,7 @@ let apps = [
     points: [
       "親子で一緒に楽しめる",
       "しかけつき絵本アプリ",
-      "夜の空に輝く、３つのおつきさまのお話",
+      "３つのおつきさまのお話",
       "おつきさまや動物をタッチして、お話を進めよう"
     ],
     devices: ["iOS"],
@@ -373,10 +411,10 @@ let apps = [
     link: "https://apps.apple.com/jp/app/little-atelier/id6761620496",
     icon: "assets/atelier.png",
     points: [
-      "子どもの成長と思い出を、楽しく残そう",
-      "家族みんなの名前を登録可能",
-      "お気に入りを展示/飾る作品は自由に入れ替え◎",
-      "アルバムでいつでも作品を見返せる"
+      "子どもの作品、スマホに飾っちゃおう",
+      "子どもごとに作品を管理",
+      "飾る作品は自由に入れ替え◎",
+      "アルバムでいつでも見返せる"
     ],
     devices: ["iOS"],
     price: "無料アプリ"
@@ -387,10 +425,10 @@ let apps = [
   link: "https://apps.apple.com/jp/app/little-atelier/id6761620496",
   icon: "assets/otegami.png",
   points: [
-    "あいうえお表なので、小さい子でも簡単入力",
+    "あいうえお表で簡単入力",
     "かわいい便箋を選択",
-    "スタンプもおして、楽しくお手紙を作れる◎",
-    "ひらがなの練習・定着/文章を考える力にも"
+    "ひらがなの練習・定着",
+    "文章を考える力にも"
   ],
   devices: ["iOS"],
   price: "無料アプリ"
@@ -464,13 +502,14 @@ card.style.position = "relative";
   <button class="edit-btn" onclick="editApp(${index})">✎</button>
   <button class="delete-btn" onclick="deleteApp(${index})">×</button>
 ` : ""}
-          <div>
-            <img src="${app.icon}" class="app-icon" alt="">
-          </div>
+          <div class="app-header">
+  <img src="${app.icon}" class="app-icon">
 
-          <div>
-            <h2 class="app-title">${app.title}</h2>
-            <div class="app-subtitle">${app.subtitle}</div>
+  <div class="app-text">
+    <h2 class="app-title">${app.title}</h2>
+    <div class="app-subtitle">${app.subtitle}</div>
+  </div>
+</div>
             <div class="line"></div>
 
             <ul>
