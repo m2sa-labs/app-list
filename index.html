@@ -34,7 +34,7 @@
 }
 
     .animal {
-      width: 220px;
+      width: 140px;
     }
 
     h1 {
@@ -233,7 +233,7 @@ ul {
   }
 
   .animal {
-    width: 140px; /* ←くまも小さく */
+    width: 100px; /* ←くまも小さく */
   }
 }
 
@@ -342,7 +342,7 @@ ul {
 /* スマホ調整 */
 @media (max-width: 760px) {
   .animal {
-    width: 175px;
+    width: 125px;
   }
 
   ul {
@@ -408,6 +408,22 @@ ul {
     const isAdmin = location.search.includes("admin");
 let apps = [
   {
+  title: "こども年間スケジュール",
+  subtitle: "親の参加・準備が一目でわかる",
+  link: "https://apps.apple.com/jp/app/id6766062119",
+  icon: "assets/schedule.png",
+  points: [
+    "○親が参加 △特別な準備が必要",
+    "親が関わる行事が記号で分かる",
+    "複数の子どもの行事をまとめて管理",
+    "年間予定をざっと把握"
+  ],
+  devices: ["iOS"],
+  price: "無料アプリ"
+}, 
+  
+  
+  {
     title: "おつきさま さんしまい",
     subtitle: "絵本アプリ",
     link: "https://apps.apple.com/jp/app/id6763572976",
@@ -416,7 +432,7 @@ let apps = [
       "親子で一緒に楽しめる",
       "しかけつき絵本アプリ",
       "３つのおつきさまのお話",
-      "月や動物をタッチして、お話を進めよう"
+      "月や動物をタッチして、お話を進める"
     ],
     devices: ["iOS"],
     price: "無料アプリ"
