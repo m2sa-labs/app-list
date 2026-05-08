@@ -342,7 +342,7 @@ ul {
 /* スマホ調整 */
 @media (max-width: 760px) {
   .animal {
-    width: 125px;
+    width: 105px;
   }
 
   ul {
@@ -437,6 +437,7 @@ ul {
   <button onclick="showPage('profile')">profile</button>
   <button onclick="showPage('privacy')">プライバシーポリシー</button>
   <button onclick="showPage('contact')">お問い合わせ</button>
+  <button onclick="showPage('links')">外部リンク</button>
 </nav>
 
 
@@ -449,7 +450,7 @@ ul {
       <div class="header-inner">
 
   
-  <h1>アプリ<br>一覧</h1>
+  <h1>アプリ一覧</h1>
   
   <img src="assets/bear.png" class="animal">
 </div>
@@ -515,21 +516,23 @@ ul {
 <section id="profilePage" class="page-section">
   <div class="policy-box">
     <h2>profile</h2>
-    <p>
-      小１の女の子、年少の男の子、のママ（３０代）
-      アプリ開発にはまっています。
+<p>
+小１の女の子、年少の男の子、のママ（３０代）<br>
+アプリ開発にはまっています。<br><br>
 
-      子どもが寝た後、
-      スローペースでアプリ作りを楽しんでいます。
+子どもが寝た後、<br>
+スローペースでアプリ作りを楽しんでいます。<br><br>
 
-      こども関連｜自分の困りごと｜趣味
-      色々なアプリをつくっていきたいです。
+こども関連｜自分の困りごと｜趣味<br>
+色々なアプリをつくっていきたいです。<br><br>
 
-      趣味 読書｜エレクトーン｜株投資信託｜推し活
+趣味 読書｜エレクトーン｜株投資信託｜推し活
+</p>
 
-    </p>
+
   </div>
 </section>
+
 
 <section id="contactPage" class="page-section">
   <div class="policy-box">
@@ -556,7 +559,21 @@ ul {
   </div>
 </section>
 
+<section id="linksPage" class="page-section">
+  <div class="policy-box">
+    <h2>外部リンク</h2>
 
+    <a class="store-link" href="https://x.com/charo_hmyk" target="_blank">
+      X（Twitter）
+    </a>
+
+    <br><br>
+
+    <a class="store-link" href="https://note.com/hmyk_312227" target="_blank">
+      note
+    </a>
+  </div>
+</section>
 
   </main>
 
@@ -819,6 +836,7 @@ function showPage(page) {
   document.getElementById("privacyPage").classList.remove("active");
   document.getElementById("profilePage").classList.remove("active");
   document.getElementById("contactPage").classList.remove("active");
+  document.getElementById("linksPage").classList.remove("active");
 
   document.getElementById(page + "Page").classList.add("active");
 
