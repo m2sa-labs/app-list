@@ -6,222 +6,267 @@
   <title>アプリ紹介</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
-      background: #fbf6ee;
-      color: #4b3324;
-    }
+ body {
+  margin: 0;
+  font-family: "Helvetica Neue", "Yu Gothic", "Hiragino Sans", sans-serif;
+  background: #ffffff;
+  color: #3f332b;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+}
 
-    .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 48px 20px;
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
- .header-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 28px;
-  width: fit-content;
+.page {
+  max-width: 1080px;
   margin: 0 auto;
+  padding: 70px 28px;
 }
 
-    .animal {
-      width: 140px;
-    }
+.header {
+  position: relative;
+  margin-bottom: 70px;
+}
 
-    h1 {
-      font-size: 44px;
-      margin: 0;
-      letter-spacing: 0.08em;
-    }
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    .form-box {
-      background: #fffdf9;
-      border-radius: 28px;
-      padding: 28px;
-      margin-bottom: 36px;
-      box-shadow: 0 8px 20px rgba(80,55,35,0.08);
-      display: none;
-    }
-
-    .form-box h2 {
-      margin-top: 0;
-      font-size: 24px;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      box-sizing: border-box;
-      margin-bottom: 12px;
-      padding: 12px;
-      border-radius: 14px;
-      border: 1px solid #ddd0bd;
-      font-size: 16px;
-      background: #fff;
-    }
-
-    textarea {
-      height: 90px;
-    }
-
-    .check-row {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin: 10px 0 18px;
-    }
-
-    .check-row label {
-      background: #f4ebde;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 15px;
-    }
-
-    .check-row input {
-      width: auto;
-      margin-right: 4px;
-    }
-
-    button {
-      border: none;
-      background: #8c8d55;
-      color: white;
-      padding: 12px 28px;
-      border-radius: 999px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .cards {
-      display: flex;
-      flex-direction: column;
-      gap: 36px;
-    }
-
-    .app-card {
-      background: #fffdf9;
-      border-radius: 32px;
-      padding: clamp(20px, 4vw, 46px);
-      box-shadow: 0 10px 24px rgba(80, 55, 35, 0.08);
-      display: block;
-      text-align: left;
-      gap: 44px;
-      align-items: center;
-    }
-
-    .app-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 12px;
-      object-fit: cover;
-      background: #e8e2c2;
-    }
-
-    .app-title {
-      font-size: 40px;
-      margin: 0 0 10px;
-    }
-
-    .app-subtitle {
-      font-size: 20px;
-      color: #8c8d55;
-      margin-bottom: 24px;
-    }
-
-    .line {
-      border-top: 1px dotted #c9bd92;
-      margin-bottom: 24px;
-    }
-
-ul {
-  list-style: none;
   text-align: left;
+}
+.hero-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 2px 0;
+}
+
+
+.hero-text {
+  font-size: 16px;
+  line-height: 2.4;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.hero-title {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.hero-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 2px 0;
+}
+
+.hero-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.animal {
+  width: 220px;
+  justify-self: center;
+}
+
+.cards {
+  display: block;
+}
+.app-image-wrap {
+  display: block;
+}
+
+.app-screenshot {
+  width: 100%;
+  max-width: 520px;
+}
+
+
+.app-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 64px;
+  align-items: center;
+  padding: 64px 0;
+  border-top: 1px solid #e8e2dc;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.app-card:last-child {
+  border-bottom: 1px solid #e8e2dc;
+}
+
+.app-left {
+  text-align: left;
+}
+
+
+.app-points {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+}
+
+.app-points li {
+  font-size: 15px;
+  line-height: 2.25;
+  margin-bottom: 18px;
+}
+
+.app-points li {
+  position: relative;
+  padding-left: 42px;
+
+  white-space: pre-line;
+}
+.app-points li::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 4px;
+
+  width: 22px;
+  height: 22px;
+
+  background-image: url("assets/heart1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.arrow-down {
+  font-size: 20px;
+  margin: 22px 0;
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 22px;
+  font-weight: 300;
+
+  margin: 0 0 24px;  /* ← 18px → 24px に */
+  
+  letter-spacing: 0.16em;
+}
+
+.title-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0 0 18px;
+  letter-spacing: 0.16em;
+}
+.appstore-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: fit-content;
-  margin: 0 auto 24px;
+  margin: 14px 0 0 34px;
+
+  text-decoration: none;
+  color: #3f332b;
+
+  transition: 0.2s ease;
 }
 
-    li {
-      font-size: 18px;
-      margin-bottom: 14px;
-    }
-
-    li::before {
-  content: "✓";
-  color: #9fa568;
-  border: 2px solid #9fa568;
-  border-radius: 4px;
-  font-size: 12px;
-  padding: 1px 4px;
-  margin-right: 12px;
+.app-subtitle {
+  display: none;
 }
 
-    .badges {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
 
-    .badge {
-      background: #f4ebde;
-      padding: 8px 20px;
-      border-radius: 999px;
-      font-size: 15px;
-    }
+.badge {
+  background: #faf7f3;
+  border: 1px solid #eee7df;
+  padding: 7px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
 
 .store-link {
   display: inline-block;
-  margin-bottom: 18px;
-  background: #8c8d55;
-  color: white;
+  color: #8c8d55;
+  background: transparent;
   text-decoration: none;
-  padding: 10px 22px;
-  border-radius: 999px;
+  padding: 0;
+  border-radius: 0;
   font-size: 15px;
+  letter-spacing: 0.14em;
 }
 
-    @media (max-width: 760px) {
- .page {
-    padding: 24px 16px;
-  }
+.app-image-wrap {
+  width: 100%;
+}
 
-  .app-card {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 24px 18px; /* ←小さく */
-    gap: 20px;
-  }
+.app-screenshot {
+  width: 100%;
+  display: block;
+  border-radius: 28px;
+  box-shadow: 0 16px 38px rgba(80, 55, 35, 0.08);
+}
 
-  .app-icon {
-    width: 60px;  /* ←小さく */
-    height: 60px;
-    margin: 0 auto;
-  }
+.form-box {
+  background: #fffdf9;
+  border-radius: 28px;
+  padding: 28px;
+  margin-bottom: 36px;
+  box-shadow: 0 8px 20px rgba(80,55,35,0.08);
+  display: none;
+}
 
-  .app-title {
-    font-size: 26px; /* ←小さく */
-  }
+input, textarea, select {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid #ddd0bd;
+  font-size: 16px;
+  background: #fff;
+}
 
-  .app-subtitle {
-    font-size: 16px;
-  }
+textarea {
+  height: 90px;
+}
 
-  li {
-    font-size: 15px;
-  }
+button {
+  border: none;
+  background: #8c8d55;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-  .store-link {
-    font-size: 14px;
-    padding: 8px 18px;
-  }
 
   .badge {
     font-size: 13px;
@@ -233,33 +278,11 @@ ul {
   }
 
   .animal {
-    width: 100px; /* ←くまも小さく */
+    width: 260px; /* ←くまも小さく */
+margin-top: 10px;
+
   }
-}
 
-
-      .app-card {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 34px 24px;
-      }
-
-      .app-icon {
-        margin: 0 auto;
-      }
-
-      h1 {
-        font-size: 28px;
-      }
-
-      .app-title {
-        font-size: 32px;
-      }
-
-      .badges {
-        justify-content: center;
-      }
-    
 
     .header {
   position: relative;
@@ -423,7 +446,160 @@ ul {
   margin-top: 28px;
   color: #8c8d55;
 }
+@media (max-width: 760px) {
+  .page {
+    padding: 42px 22px;
+  }
 
+  .header-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-text {
+    font-size: 14px;
+    line-height: 2.2;
+  }
+
+  .hero-title {
+    font-size: 20px;
+  }
+
+  .animal {
+    width: 150px;
+  }
+
+  .app-card {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding: 52px 0;
+  }
+
+  .app-points li {
+    font-size: 14px;
+  }
+
+  .app-title {
+    font-size: 20px;
+  }
+}
+.app-card {
+  display: grid !important;
+
+  grid-template-columns: 320px 320px !important;
+
+  justify-content: center !important;
+  align-items: center !important;
+
+  gap: 90px !important;
+
+  padding: 64px 0;
+}
+.app-left {
+  text-align: left;
+
+  width: 320px;
+}
+
+.app-image-wrap {
+  display: block !important;
+  width: 100% !important;
+}
+
+.app-screenshot {
+  display: block !important;
+
+  width: 240px !important;
+  max-width: 100% !important;
+
+  height: auto !important;
+
+  border-radius: 28px;
+  box-shadow: 0 16px 38px rgba(80, 55, 35, 0.08);
+}
+.appstore-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  margin: 14px 0 0 34px;
+
+  text-decoration: none;
+  color: #3f332b;
+
+  transition: 0.2s ease;
+}
+
+
+.appstore-badge:hover {
+  background: #f4ede6;
+  transform: translateY(-1px);
+}
+.profile-bear {
+  width: 170px;   /* ← 120 → 170くらい */
+
+  display: block;
+
+  margin-top: 18px;   /* ← 上だけ余白 */
+  margin-left: 0;     /* ← 左揃え */
+}
+.growth-box {
+  margin-top: 42px;
+
+  border-top: 1px solid #eee5dc;
+  padding-top: 32px;
+}
+
+.growth-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 28px;
+
+  font-size: 18px;
+  letter-spacing: 0.12em;
+}
+
+.growth-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.growth-item {
+  display: flex;
+  gap: 18px;
+
+  margin-bottom: 26px;
+}
+
+.growth-number {
+  width: 72px;
+
+  flex-shrink: 0;
+
+  color: #8c8d55;
+  font-size: 18px;
+
+  line-height: 1.6;
+}
+
+.growth-text {
+  line-height: 2;
+  font-size: 14px;
+}
+.growth-sub {
+  margin-left: 32px;
+
+  margin-top: -10px;
+  margin-bottom: 28px;
+
+  font-size: 13px;
+  color: #8c8d55;
+
+  letter-spacing: 0.12em;
+}
 
   </style>
 </head>
@@ -447,12 +623,26 @@ ul {
 
 
     
-      <div class="header-inner">
+    <div class="header-inner">
+  <div class="hero-text">
+   <div>小１と年少ママ</div>
+<div>子育てしてて</div>
 
-  
-  <h1>アプリ一覧</h1>
-  
-  <img src="assets/bear.png" class="animal">
+<div class="hero-line">
+  <img src="assets/heart1.png" class="hero-icon">
+  <span>これ困った</span>
+</div>
+
+<div class="hero-line">
+  <img src="assets/heart1.png" class="hero-icon">
+  <span>これあったら便利かも</span>
+</div>
+
+<div>をアプリにしています</div>
+
+  </div>
+
+  <img src="bear.png" class="animal">
 </div>
 
 
@@ -518,15 +708,84 @@ ul {
     <h2>profile</h2>
 <p>
 小１の女の子、年少の男の子、のママ（３０代）<br>
-アプリ開発にはまっています。<br><br>
 
 子どもが寝た後、<br>
 スローペースでアプリ作りを楽しんでいます。<br><br>
 
 こども関連｜自分の困りごと｜趣味<br>
-色々なアプリをつくっていきたいです☆<br><br>
+色々なアプリをつくっていきたいです<br><br>
 
 趣味 読書｜エレクトーン｜株投資信託｜推し活
+
+<br><br>
+
+<img src="bear.png" class="profile-bear">
+<div class="growth-box">
+
+  <div class="growth-title">
+    <img src="tulip.png" class="growth-icon">
+    <span>アプリづくりの成長記録</span>
+  </div>
+<div class="growth-sub">
+  現在つくったアプリ ７つ
+</div>
+
+
+  <div class="growth-item">
+    <div class="growth-number">１つめ</div>
+    <div class="growth-text">
+      HTML / CSS / JS を WebView化して<br>
+      はじめて App Store に提出
+    </div>
+  </div>
+
+  <div class="growth-item">
+    <div class="growth-number">２つめ</div>
+    <div class="growth-text">
+      iPad 対策を覚えた
+    </div>
+  </div>
+
+  <div class="growth-item">
+    <div class="growth-number">３つめ</div>
+    <div class="growth-text">
+      はじめて SwiftUI を使った
+    </div>
+  </div>
+
+  <div class="growth-item">
+    <div class="growth-number">４つめ</div>
+    <div class="growth-text">
+      CloudKit・共有機能を実装<br>
+      App Store Connect の流れに慣れてきた<br>
+      ダークモード対策を覚えた
+    </div>
+  </div>
+
+  <div class="growth-item">
+    <div class="growth-number">５つめ</div>
+    <div class="growth-text">
+      アイコンバーを使うと<br>
+      いい感じになることを覚えた
+    </div>
+  </div>
+
+  <div class="growth-item">
+    <div class="growth-number">６つめ</div>
+    <div class="growth-text">
+      GPT に最初に渡す<br>
+      プロンプトのコツを掴んできた
+    </div>
+  </div>
+
+  <div class="growth-item">
+    <div class="growth-number">７つめ</div>
+    <div class="growth-text">
+      通知機能をはじめて実装した
+    </div>
+  </div>
+
+</div>
 </p>
 
 
@@ -584,28 +843,47 @@ let apps = [
   title: "こども年間スケジュール",
   subtitle: "親の参加・準備が一目でわかる",
   link: "https://apps.apple.com/jp/app/id6766062119",
-  icon: "assets/schedule.png",
-  points: [
-    "○親が参加 △特別な準備が必要",
-    "親が関わる行事が記号で分かる",
-    "複数の子どもの行事をまとめて管理",
-    "年間予定をざっと把握"
-  ],
+  icon: "schedule_screen.png",
+points: [
+  "小学生と保育園児で\n年間予定表が2枚になり\n少し把握しづらい。",
+  
+  "親が関係する行事\n「参加」「特別な準備あり」\nを瞬時に見分けたい。",
+
+  "年間の予定をざっと把握したい。"
+],
+
   devices: ["iOS"],
   price: "無料アプリ"
 }, 
 
 {
+  title: "こども帰宅時計",
+  subtitle: "帰宅予定時間をアナログ表示",
+  link: "",
+  icon: "kitakuclock.png",
+  points: [
+    "小学校は短縮授業などで\n早帰りの日が結構多い。",
+
+    "年間予定と一緒に帰宅予定入れ込むと\n他行事が見にくくなる",
+
+    "アナログ時計でパッと時間を\n確認したい"
+  ],
+  devices: ["iOS"],
+  price: "無料アプリ"
+},
+
+
+{
   title: "きろくタウン",
   subtitle: "家族の通院・体調記録アプリ",
   link: "https://apps.apple.com/app/id6771406356",
-  icon: "assets/kirokutown.png",
+  icon: "kirokutown.png",
   points: [
-    "「前回いつだった？」をすぐ確認",
-    "家族ごとに記録を管理",
-    "項目名は自由に変更可",
-    "RPGの世界観で楽しく記録"
-  ],
+  "「子ども、前どんな症状で病院行ったっけ？」\n「あの大変だった風邪、いつだった？」\nなどの通院・体調の記録を確認したい",
+
+
+  "ゲームが好きなので、\nRPGっぽい雰囲気にして気分をあげたい"
+],
   devices: ["iOS"],
   price: "無料アプリ"
 },
@@ -614,13 +892,15 @@ let apps = [
   title: "こどもサイズ帳",
   subtitle: "今のサイズを一目で確認",
   link: "https://apps.apple.com/app/id6767790620",
-  icon: "assets/saizu.png",
+  icon: "saizu.png",
   points: [
-    "今の身長 体重 くつ 服サイズを確認",
-    "複数の子どものサイズを管理",
-    "身長と体重はグラフでも見える",
-    "家族コードで、別端末でも共有"
-  ],
+  "園や学校書類・病院で体重など書く時、あれ？となることがある",
+  
+  "現在の身長・体重などを\nさっと確認したい",
+
+  "◯歳頃、どれくらいだった？\nとサイズを振り返りたい"
+],
+
   devices: ["iOS"],
   price: "無料アプリ"
 }, 
@@ -632,28 +912,31 @@ let apps = [
     title: "おつきさま さんしまい",
     subtitle: "絵本アプリ",
     link: "https://apps.apple.com/jp/app/id6763572976",
-    icon: "assets/app1.png",
+    icon: "app1.png",
     points: [
-      "親子で一緒に楽しめる",
-      "しかけつき絵本アプリ",
-      "３つのおつきさまのお話",
-      "月や動物をタッチして、お話を進める"
-    ],
+  "子どもが絵本大好き",
+
+  "月も大好きで\nおつきさまを見ながら\n色々お話しをよくする",
+
+  "お話している内容を元に\n絵本にしたら喜んでくれそう"
+],
+
     devices: ["iOS"],
     price: "無料アプリ"
   }, 
 
   {
-    title: "こども作品展｜リトルアトリエ",
+    title: "こども作品展\nリトルアトリエ",
     subtitle: "子どもの作品を「保管」＆「展示」",
     link: "https://apps.apple.com/jp/app/little-atelier/id6761620496",
-    icon: "assets/atelier.png",
-    points: [
-      "子どもの作品をスマホに飾れる",
-      "子どもごとに作品を管理",
-      "飾る作品は自由に入れ替え◎",
-      "アルバムでいつでも見返せる"
-    ],
+    icon: "atelier.png",
+   points: [
+  "保育園でつくった作品が\nどんどん増えていく",
+
+  "気軽に携帯内に保存して\n簡単に振り返りたい",
+
+  "展示されているような感じにしたい"
+],
     devices: ["iOS"],
     price: "無料アプリ"
   },
@@ -661,13 +944,14 @@ let apps = [
   title: "きょうのおてがみ",
   subtitle: "おてがみつくりたい！を叶えるアプリ",
   link: "https://apps.apple.com/app/id6761917431",
-  icon: "assets/otegami.png",
+  icon: "otegami.png",
   points: [
-    "あいうえお表で簡単入力",
-    "かわいい便箋を選択",
-    "ひらがなの練習・定着",
-    "文章を考える力にも"
-  ],
+  "ひらがなは読めるけど\nまだ文字はかけない",
+
+  "あいうえお表をつかえば\nお手紙がかけそう",
+
+  "楽しく遊びながらお手紙書いて\n文を考える力も備わってくれたら"
+],
   devices: ["iOS"],
   price: "無料アプリ"
 }
@@ -735,32 +1019,37 @@ function deleteApp(index) {
 card.style.position = "relative";
 
 
-        card.innerHTML = `
-        ${isAdmin ? `
-  <button class="edit-btn" onclick="editApp(${index})">✎</button>
-  <button class="delete-btn" onclick="deleteApp(${index})">×</button>
+   card.innerHTML = `
+  ${isAdmin ? `
+    <button class="edit-btn" onclick="editApp(${index})">✎</button>
+    <button class="delete-btn" onclick="deleteApp(${index})">×</button>
+  ` : ""}
+
+  <div class="app-left">
+   
+
+    <ul class="app-points">
+      ${app.points.slice(0, 3).map(point => `<li>${point}</li>`).join("")}
+    </ul>
+
+    <div class="arrow-down">↓</div>
+
+    <h2 class="app-title">
+  <img src="tulip.png" class="title-icon">
+  <span>${app.title}</span>
+</h2>
+
+   ${app.link ? `
+  <a class="badge appstore-badge" href="${app.link}" target="_blank">
+    iOS
+  </a>
 ` : ""}
-          <div class="app-header">
-  <img src="${app.icon}" class="app-icon">
 
-  <div class="app-text">
-    <h2 class="app-title">${app.title}</h2>
-    <div class="app-subtitle">${app.subtitle}</div>
-  </div>
 </div>
-            <div class="line"></div>
-
-            <ul>
-              ${app.points.map(point => `<li>${point}</li>`).join("")}
-            </ul>
-
-            ${app.link ? `<a class="store-link" href="${app.link}" target="_blank">アプリを見る</a>` : ""}
-            <div class="badges">
-              ${app.devices.map(device => `<span class="badge">${device}</span>`).join("")}
-              <span class="badge">${app.price}</span>
-            </div>
-          </div>
-        `;
+  <div class="app-image-wrap">
+    <img src="${app.icon}" class="app-screenshot">
+  </div>
+`;
 
         appCards.appendChild(card);
       });
