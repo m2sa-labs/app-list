@@ -368,6 +368,7 @@ margin-top: 10px;
     width: 105px;
   }
 
+
   ul {
     width: 100%;
     margin: 0 0 24px 0;
@@ -482,6 +483,11 @@ margin-top: 10px;
   .app-title {
     font-size: 20px;
   }
+#profilePage p {
+  font-size: 13px;
+  line-height: 2;
+}
+
 }
 .app-card {
   display: grid !important;
@@ -580,9 +586,9 @@ margin-top: 10px;
   flex-shrink: 0;
 
   color: #8c8d55;
-  font-size: 18px;
 
-  line-height: 1.6;
+  font-size: 14px;   /* ← 18px → 14px に */
+  line-height: 2;    /* ← growth-text と揃える */
 }
 
 .growth-text {
@@ -630,6 +636,10 @@ margin-top: 10px;
   .appstore-badge {
     margin: 14px 0 0 34px !important;
   }
+.profile-bear {
+  width: 230px;
+}
+
 }
   </style>
 </head>
@@ -761,59 +771,67 @@ margin-top: 10px;
 </div>
 
 
-  <div class="growth-item">
-    <div class="growth-number">１つめ</div>
-    <div class="growth-text">
-      HTML / CSS / JS を WebView化して<br>
-      はじめて App Store に提出
-    </div>
+<div class="growth-item">
+  <div class="growth-number">１つめ</div>
+  <div class="growth-text">
+    HTML / CSS / JS でつくったものを<br>
+    WebView 化して<br>
+    はじめて App Store に提出<br>
+    iPad 対策を覚えた
   </div>
+</div>
 
-  <div class="growth-item">
-    <div class="growth-number">２つめ</div>
-    <div class="growth-text">
-      iPad 対策を覚えた
-    </div>
-  </div>
 
-  <div class="growth-item">
-    <div class="growth-number">３つめ</div>
-    <div class="growth-text">
-      はじめて SwiftUI を使った
-    </div>
+<div class="growth-item">
+  <div class="growth-number">２つめ</div>
+  <div class="growth-text">
+    ダークモード対策を覚えた<br>
+    AVFoundation で<br>
+    BGM 再生を実装した
   </div>
+</div>
 
-  <div class="growth-item">
-    <div class="growth-number">４つめ</div>
-    <div class="growth-text">
-      CloudKit・共有機能を実装<br>
-      App Store Connect の流れに慣れてきた<br>
-      ダークモード対策を覚えた
-    </div>
+<div class="growth-item">
+  <div class="growth-number">３つめ</div>
+  <div class="growth-text">
+    はじめて SwiftUI を使った<br>
+    NavigationStack を使った<br>
+    画面遷移を覚えた
   </div>
+</div>
 
-  <div class="growth-item">
-    <div class="growth-number">５つめ</div>
-    <div class="growth-text">
-      アイコンバーを使うと<br>
-      いい感じになることを覚えた
-    </div>
+<div class="growth-item">
+  <div class="growth-number">４つめ</div>
+  <div class="growth-text">
+    CloudKit ・ 共有機能を実装<br>
+    App Store Connect の流れに<br>
+    慣れてきた
   </div>
+</div>
 
-  <div class="growth-item">
-    <div class="growth-number">６つめ</div>
-    <div class="growth-text">
-      GPT に最初に渡す<br>
-      プロンプトのコツを掴んできた
-    </div>
+<div class="growth-item">
+  <div class="growth-number">５つめ</div>
+  <div class="growth-text">
+    アイコンバーが<br>
+    気に入った
   </div>
+</div>
 
-  <div class="growth-item">
-    <div class="growth-number">７つめ</div>
-    <div class="growth-text">
-      通知機能をはじめて実装した
-    </div>
+<div class="growth-item">
+  <div class="growth-number">６つめ</div>
+  <div class="growth-text">
+    GPT に渡すプロンプトの<br>
+    コツを掴んできた
   </div>
+</div>
+
+<div class="growth-item">
+  <div class="growth-number">７つめ</div>
+  <div class="growth-text">
+    通知機能を<br>
+    はじめて実装した
+  </div>
+</div>
 
 </div>
 </p>
