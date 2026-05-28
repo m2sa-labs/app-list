@@ -600,7 +600,37 @@ margin-top: 10px;
 
   letter-spacing: 0.12em;
 }
+/* スマホだけ：文章→タイトル→iOSボタン→スクショ */
+@media (max-width: 760px) {
+  .app-card {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
 
+    width: 100% !important;
+    gap: 22px !important;
+    padding: 52px 0 !important;
+  }
+
+  .app-left {
+    width: 100% !important;
+  }
+
+  .app-image-wrap {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .app-screenshot {
+    width: 82% !important;
+    max-width: 320px !important;
+  }
+
+  .appstore-badge {
+    margin: 14px 0 0 34px !important;
+  }
+}
   </style>
 </head>
 
@@ -625,7 +655,7 @@ margin-top: 10px;
     
     <div class="header-inner">
   <div class="hero-text">
-   <div>小１と年少ママ</div>
+   <div>小１と年少の２児のママ</div>
 <div>子育てしてて</div>
 
 <div class="hero-line">
